@@ -1,0 +1,17 @@
+{
+  "name": "backend",
+  "version": "0.0.1",
+  "description": "Backend for Praïda",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shawn Inder <shawninder@gmail.com>",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "express": "^4.15.3",
+    "express-basic-auth": "^1.1.1",
+    "nconf": "^0.8.4"
+  }
+}
