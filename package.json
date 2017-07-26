@@ -4,14 +4,20 @@
   "description": "Backend for Praïda",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "NODE_ENV=dev nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_ENV=prod nodemon index.js"
   },
   "author": "Shawn Inder <shawninder@gmail.com>",
   "license": "GPL-3.0",
   "dependencies": {
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
     "express": "^4.15.3",
     "express-basic-auth": "^1.1.1",
+    "lodash.clonedeep": "^4.5.0",
+    "lodash.merge": "^4.6.0",
+    "mongodb": "^2.2.30",
     "nconf": "^0.8.4"
   }
 }
