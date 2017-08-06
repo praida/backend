@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "NODE_ENV=dev nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "NODE_ENV=prod nodemon index.js"
+    "start": "NODE_ENV=production nodemon index.js",
+    "deploy": "now --dotenv"
   },
   "author": "Shawn Inder <shawninder@gmail.com>",
   "license": "GPL-3.0",
@@ -18,6 +18,8 @@
     "lodash.clonedeep": "^4.5.0",
     "lodash.merge": "^4.6.0",
     "mongodb": "^2.2.30",
-    "nconf": "^0.8.4"
+    "nconf": "^0.8.4",
+    "nodemon": "^1.11.0",
+    "qs": "^6.5.0"
   }
 }

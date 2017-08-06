@@ -10,11 +10,11 @@ const saveChanges = require('./saveChanges')
 
 const handleErr = require('./handleErr')
 
-const auth = basicAuth({
-  users: {
-    guest: 'guest'
-  }
-})
+const getUsers = require('./getUsers')
+
+const users = getUsers()
+
+const auth = basicAuth(users)
 
 const Server = {
   start: (conf) => {
