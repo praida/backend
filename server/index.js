@@ -2,13 +2,14 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const basicAuth = require('express-basic-auth')
-const pkg = require('./package')
 
-const getFields = require('./getFields')
-const setup = require('./dev/setup')
-const saveChanges = require('./saveChanges')
+const pkg = require('../package')
 
-const handleErr = require('./handleErr')
+const getFields = require('./mw/getFields')
+const setup = require('./mw/setup')
+const saveChanges = require('./mw/saveChanges')
+
+const handleErr = require('./mw/handleErr')
 
 const getUsers = require('./getUsers')
 
@@ -29,7 +30,7 @@ const Server = {
       return next()
     })
 
-    server.use('/package.json', (req, res) => {
+    server.get('/package.json', (req, res) => {
       res.status(200).json(pkg)
     })
 

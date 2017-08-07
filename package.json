@@ -4,7 +4,7 @@
   "description": "Backend for Praïda",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE_ENV=dev nodemon index.js",
+    "dev": "NODE_ENV=dev nodemon --inspect index.js",
     "start": "NODE_ENV=production nodemon index.js",
     "deploy": "now --dotenv"
   },
@@ -16,6 +16,7 @@
     "express": "^4.15.3",
     "express-basic-auth": "^1.1.1",
     "lodash.clonedeep": "^4.5.0",
+    "lodash.isempty": "^4.4.0",
     "lodash.merge": "^4.6.0",
     "mongodb": "^2.2.30",
     "nconf": "^0.8.4",
