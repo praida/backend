@@ -1,6 +1,8 @@
+const mongodb = require('mongodb')
+const ObjectId = mongodb.ObjectID
 const withDb = require('./with')
 
-module.exports = exports = (conf, records) => {
+module.exports = exports = (conf, ids) => {
   const config = {
     user: conf.get('mongoUser'),
     pass: conf.get('mongoPass'),
@@ -11,11 +13,12 @@ module.exports = exports = (conf, records) => {
   return withDb(config, (db) => {
     const query = {
       _id: {
-        $in: Object.keys(records).map((field) => {
-          return field._id
+        $in: ids.map((id) => {
+          return new ObjectId(id)
         })
       }
     }
+    console.log('\n\nQuery', query)
     return db.collection('records').remove(query)
   })
 }

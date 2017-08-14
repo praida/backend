@@ -6,6 +6,7 @@ const basicAuth = require('express-basic-auth')
 const pkg = require('../package')
 
 const getFields = require('./mw/getFields')
+const getRecords = require('./mw/getRecords')
 const setup = require('./mw/setup')
 const saveChanges = require('./mw/saveChanges')
 
@@ -41,6 +42,8 @@ const Server = {
     server.use('/setup', auth, setup(conf), handleErr)
 
     server.get('/getFields', auth, getFields(conf), handleErr)
+
+    server.get('/getRecords', auth, getRecords(conf), handleErr)
 
     server.post('/saveChanges', auth, saveChanges(conf), handleErr)
 
