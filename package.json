@@ -8,7 +8,11 @@
     "start": "NODE_ENV=production nodemon index.js",
     "deploy": "now --dotenv --public"
   },
+  "keywords": [],
   "author": "Shawn Inder <shawninder@gmail.com>",
+  "contributors": [
+    "Shawn Inder <shawninder@gmail.com>"
+  ],
   "license": "GPL-3.0",
   "dependencies": {
     "body-parser": "^1.17.2",
@@ -25,5 +29,14 @@
   },
   "devDependencies": {
     "standard": "^10.0.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/praida/backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/praida/backend/issues"
+  },
+  "homepage": "https://github.com/praida/backend#readme",
+  "engines": {}
 }
