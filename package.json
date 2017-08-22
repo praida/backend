@@ -25,7 +25,8 @@
     "mongodb": "^2.2.30",
     "nconf": "^0.8.4",
     "nodemon": "^1.11.0",
-    "qs": "^6.5.0"
+    "qs": "^6.5.0",
+    "quick-hash": "^1.0.4"
   },
   "devDependencies": {
     "standard": "^10.0.3"
