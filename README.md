@@ -6,9 +6,7 @@
 - Create a replica set: https://docs.mongodb.com/manual/tutorial/deploy-replica-set-for-testing/
 
 ```
-mongod --port 27017 --dbpath /srv/mongodb/rs0-0 --replSet rs0 --smallfiles --oplogSize 128
-mongod --port 27018 --dbpath /srv/mongodb/rs0-1 --replSet rs0 --smallfiles --oplogSize 128
-mongod --port 27019 --dbpath /srv/mongodb/rs0-2 --replSet rs0 --smallfiles --oplogSize 128
+npm run db
 ```
 
 ## Deployment
