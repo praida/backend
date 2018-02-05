@@ -4,6 +4,7 @@
   "description": "Backend for Praïda",
   "main": "index.js",
   "scripts": {
+    "db": "node ./bin/localDb.js",
     "dev": "NODE_ENV=dev nodemon --inspect index.js",
     "start": "NODE_ENV=production nodemon index.js",
     "deploy": "now --dotenv --public"
@@ -26,10 +27,12 @@
     "nconf": "^0.8.4",
     "nodemon": "^1.11.0",
     "qs": "^6.5.0",
-    "quick-hash": "^1.0.4"
+    "quick-hash": "^1.0.4",
+    "vigour-spawn": "^1.0.10"
   },
   "devDependencies": {
-    "standard": "^10.0.3"
+    "standard": "^10.0.3",
+    "vigour-spawn": "^1.0.10"
   },
   "repository": {
     "type": "git",
