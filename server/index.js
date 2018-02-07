@@ -9,6 +9,7 @@ const getFields = require('./mw/getFields')
 const getRecords = require('./mw/getRecords')
 const setup = require('./mw/setup')
 const saveChanges = require('./mw/saveChanges')
+const saveRecord = require('./mw/saveRecord')
 
 const handleErr = require('./mw/handleErr')
 
@@ -41,11 +42,13 @@ const Server = {
 
     server.use('/setup', auth, setup(conf), handleErr)
 
-    server.get('/getFields', auth, getFields(conf), handleErr)
+    server.get('/getFields', getFields(conf), handleErr)
 
     server.get('/getRecords', auth, getRecords(conf), handleErr)
 
     server.post('/saveChanges', auth, saveChanges(conf), handleErr)
+
+    server.post('/saveRecord', saveRecord(conf), handleErr)
 
     server.use((req, res) => {
       console.log('req.originalUrl', req.originalUrl)
